@@ -25,8 +25,8 @@ public class targetRoll {
 	}
 	
 	public static int rollDice(int target) {
-		int num = Math.random(1, 6);
 		use Random rand = new Random();
+		int num = rand.nextInt(6) + 1;
 		
 	}
 }
