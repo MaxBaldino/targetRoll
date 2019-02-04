@@ -1,6 +1,8 @@
 package targetRoll;
 
 import java.util.Scanner;
+import java.util.Random;
+
 
 public class targetRoll {
 
@@ -13,20 +15,27 @@ public class targetRoll {
 		System.out.println("How many times should it roll?");
 		int rollCount = Integer.parseInt(input.nextLine());
 		int counter = rollCount;
-		int targetNum = 0;
+		int targetCount = 0;
 		
 		while (counter > 1) {
-			rollDice(target);
-			
+			targetCount += rollDice(target);
+			counter -= 1;
 			
 		}
+		System.out.println("The number " + target + " was rolled " + targetCount + " times out of " + rollCount + " rolls.");
 		
 		
 	}
 	
 	public static int rollDice(int target) {
-		use Random rand = new Random();
+		Random rand = new Random();
 		int num = rand.nextInt(6) + 1;
+		if num = target {
+			return 1;
+		}
+		else {
+			return 0;
+		}
 		
 	}
 }
